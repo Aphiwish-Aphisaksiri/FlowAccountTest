@@ -20,8 +20,10 @@ class Product(BaseModel):
     stock: int
     category: str
 
-from fastapi import status, Request
-from fastapi.responses import JSONResponse
+# Redirect root ("/") to /docs
+@app.get("/")
+def root():
+    return RedirectResponse(url="/docs")
 from datetime import datetime, timezone
 
 def validate_product(data):
