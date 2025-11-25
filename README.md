@@ -10,4 +10,4 @@ To run the application, use the command below:
 '''
 uvicorn main:app --reload
 '''
-The application will be available at http://127.0.0.1:8000
+The application will be available at http://127.0.0.1:8000/docs
