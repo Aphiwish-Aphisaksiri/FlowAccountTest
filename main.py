@@ -24,7 +24,7 @@ class Product(BaseModel):
 @app.get("/")
 def root():
     return RedirectResponse(url="/docs")
-from datetime import datetime, timezone
+
 
 def validate_product(data):
     errors = []
