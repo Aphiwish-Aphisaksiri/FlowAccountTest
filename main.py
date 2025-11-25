@@ -129,7 +129,7 @@ class BulkPriceUpdateItem(BaseModel):
     newPrice: float
 
 class BulkPriceUpdateRequest(BaseModel):
-    updates: conlist(BulkPriceUpdateItem, min_length=1)
+    updates: List[BulkPriceUpdateItem] = Field(..., min_items=1)
 
 @app.put("/api/products/bulk-price-update")
 async def bulk_price_update(request: BulkPriceUpdateRequest):
