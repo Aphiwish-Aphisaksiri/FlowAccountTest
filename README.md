@@ -19,8 +19,10 @@ To use docker to run the application, use the commands below:
 docker build -t flowaccounttest .
 docker run --name fastapitest -p 8000:8000 flowaccounttest
 ```
+Note: build the docker image only once, then you can run the container multiple times. Make sure to stop and remove the container before running a new one with the same name.
 
 To remove the container after use, run:
 ```
 docker rm fastapitest
 ```
+Note: make sure the container is stopped before removing it.
